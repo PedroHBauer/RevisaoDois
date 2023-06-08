@@ -15,10 +15,21 @@ public class Form extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                Login formSegundaTelaCadasto = new Login();
-                formSegundaTelaCadasto.setContentPane(formSegundaTelaCadasto.panel1);
-                formSegundaTelaCadasto.setVisible(true);
-                formSegundaTelaCadasto.setSize(350, 350);
+                if (textField1.getText().equals("admin") && textField2.getText().equals("admin")) {
+
+                    Login formSegundaTelaCadasto = new Login();
+                    formSegundaTelaCadasto.setContentPane(formSegundaTelaCadasto.panel1);
+                    formSegundaTelaCadasto.setVisible(true);
+                    formSegundaTelaCadasto.setSize(350, 350);
+
+                }else {
+
+                    Erro TelaErro = new Erro();
+                    TelaErro.setContentPane(TelaErro.panel1);
+                    TelaErro.setVisible(true);
+                    TelaErro.setSize(75, 75);
+
+                }
 
             }
 
